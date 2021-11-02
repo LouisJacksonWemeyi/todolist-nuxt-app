@@ -1,4 +1,6 @@
 # todolist-nuxt-app
+Click on this link to test the App
+https://todolist-nuxt-app.herokuapp.com/
 
 ## Build Setup
 
