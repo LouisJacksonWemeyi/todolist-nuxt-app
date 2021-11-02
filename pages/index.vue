@@ -148,32 +148,15 @@ export default {
       console.log(this.allTasks);
     },
     updateTask(task) {
-      console.log(task);
       this.task = task.task;
       this.dayAndTime = task.dayAndTime;
       this.reminder = task.reminder;
-      this.taskIdToUpdate = task._id;
+      this.taskIdToUpdate = task.id;
       this.isUpdateTask = true;
       this.$store.state.showAdd || this.$store.commit("toggle");
-
-      console.log(
-        this.task,
-        this.dayAndTime,
-        this.reminder,
-        this.taskIdToUpdate
-      );
     },
   },
-  /*async fetch() {
-      this.allTasks = await fetch(
-        'http://localhost:4000/todos'
-      ).then(res => res.json())
-    },*/
   mounted() {
-    /*fetch("http://localhost:4000/todos")
-      .then((res) => res.json())
-      .then((data) => (this.allTasks = data))
-      .catch((err) => console.log(err.message));*/
     this.fetchAllTasks();
   },
 };
